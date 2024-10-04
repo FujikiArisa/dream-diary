@@ -1,0 +1,488 @@
+html {
+  font-size: 62.5%;
+  color: #f2e7da;
+}
+html img {
+  width: 100%;
+}
+html body {
+  min-height: 100vh;
+  font-family: "Kiwi Maru", serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: clamp(12px, 2vw, 14px);
+  background: #443366;
+  background: -webkit-gradient(linear, left bottom, left top, from(#443366), color-stop(50%, #2c3459));
+  background: linear-gradient(0deg, #443366 0%, #2c3459 50%);
+}
+html body::before {
+  background-image: url(/static/images/common/starry@3x-8.png);
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  background-repeat: repeat;
+  height: 100%;
+  background-size: 1000px;
+  z-index: -3;
+}
+html body > main::after {
+  background-image: url(/static/images/common/cloud@3x-8.png);
+  content: "";
+  display: block;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  z-index: -1;
+}
+html body header {
+  position: relative;
+}
+html body header .header-sp {
+  display: none;
+}
+@media screen and (max-width: 390px) {
+  html body header .header-sp {
+    display: block;
+  }
+}
+html body header .header-sp h1 {
+  max-width: 18rem;
+  margin-inline: auto;
+  padding-inline: 2rem;
+  margin-top: 2rem;
+}
+html body header .header-pc {
+  display: block;
+  height: clamp(60px, 15vw, 110px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1a2040;
+  padding-inline: 2rem;
+}
+@media screen and (max-width: 992px) {
+  html body header .header-pc {
+    padding-inline: 1rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  html body header .header-pc {
+    display: none;
+  }
+}
+html body header .header-pc h1 {
+  width: clamp(40px, 8%, 60px);
+}
+html body header .header-pc h2 {
+  position: absolute;
+  width: 10rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+html body header .header-pc h2 img {
+  height: clamp(35px, 6vw, 50px);
+}
+html body header .header-pc div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+@media screen and (max-width: 992px) {
+  html body header .header-pc div {
+    gap: 0.5rem;
+  }
+}
+html body header .header-pc div a span {
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 300;
+}
+html body header .header-pc div .menu-btn {
+  z-index: 9999;
+}
+html body header .menu {
+  background-color: rgba(0, 0, 0, 0.8039215686);
+  width: 40vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  padding: 10rem 2rem;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+@media screen and (max-width: 390px) {
+  html body header .menu {
+    display: none;
+  }
+}
+html body header .menu.is-active {
+  pointer-events: auto;
+  opacity: 1;
+}
+html body header .menu ul li {
+  text-align: center;
+  margin-top: 5rem;
+}
+html body header .menu ul li.inactive {
+  opacity: 0.5;
+}
+html body header .menu ul li img {
+  width: 10rem;
+}
+html body header .menu ul li:nth-child(2), html body header .menu ul li:nth-child(3) {
+  font-family: "Alice", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  font-size: clamp(2rem, 2vw, 3rem);
+}
+html body header .menu ul li:last-child {
+  width: 156px;
+  aspect-ratio: 156/56;
+  font-size: clamp(14px, 2vw, 16px);
+  text-align: center;
+  display: block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  position: relative;
+  line-height: 56px;
+  z-index: 1;
+  margin-inline: auto;
+}
+html body header .menu ul li:last-child::before {
+  background-image: url(/static/images/common/button.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+html body h6:not(#logo_login) {
+  text-align: end;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
+  margin-top: 3rem;
+}
+html body h6:not(#logo_login) img {
+  width: clamp(80px, 12vw, 150px);
+}
+html body .add a {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background-color: #fff;
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-image: url(/static/images/common/add.svg);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+html body .add a:hover {
+  -webkit-box-shadow: 0 0 20px #e6a88a;
+          box-shadow: 0 0 20px #e6a88a;
+  border-radius: 50%;
+}
+@media screen and (max-width: 390px) {
+  html body .add a {
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 15vw;
+    height: 15vw;
+  }
+}
+html body .menu-sp {
+  display: none;
+}
+@media screen and (max-width: 390px) {
+  html body .menu-sp {
+    display: block;
+    background-color: #1a2040;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+  }
+  html body .menu-sp div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 14vw;
+    margin: 0.8rem 0;
+  }
+  html body .menu-sp div ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 100%;
+  }
+  html body .menu-sp div ul li a {
+    width: 14vw;
+    height: 11vw;
+    font-size: 0.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body .menu-sp div ul li a.active {
+    color: #e6a88a;
+  }
+  html body .menu-sp div ul li a span {
+    font-weight: 200;
+    font-size: 8vw;
+  }
+  html body .menu-sp div ul li a img {
+    width: 55%;
+  }
+}
+
+main > div {
+  margin: 14rem auto 0;
+  width: clamp(300px, 90vw, 750px);
+  position: relative;
+  padding-inline: 2rem;
+  margin-bottom: 10rem;
+}
+@media screen and (max-width: 390px) {
+  main > div {
+    margin-top: 6rem;
+  }
+}
+main > div form {
+  background-image: url(/static/images/newdiary/ringnote_02.svg);
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  padding: 5rem 10% 4rem;
+  position: relative;
+}
+@media screen and (max-width: 390px) {
+  main > div form {
+    padding: 2rem 5%;
+  }
+}
+main > div form label span {
+  font-family: "Alice", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+main > div form label:has(span) {
+  margin-bottom: 1rem;
+  display: block;
+  letter-spacing: 0.4rem;
+  font-size: clamp(14px, 2vw, 18px);
+  position: relative;
+}
+main > div form #feel,
+main > div form #detail,
+main > div form #submit {
+  margin-top: 6rem;
+}
+@media screen and (max-width: 390px) {
+  main > div form #feel,
+  main > div form #detail,
+  main > div form #submit {
+    margin-top: 3rem;
+  }
+}
+main > div form input,
+main > div form textarea {
+  background-color: #857db3;
+  border-radius: 5px;
+  padding: 1rem;
+  color: #1a2040;
+  height: 4rem;
+}
+main > div form input::-webkit-input-placeholder, main > div form textarea::-webkit-input-placeholder {
+  color: #494170;
+}
+main > div form input::-moz-placeholder, main > div form textarea::-moz-placeholder {
+  color: #494170;
+}
+main > div form input:-ms-input-placeholder, main > div form textarea:-ms-input-placeholder {
+  color: #494170;
+}
+main > div form input::-ms-input-placeholder, main > div form textarea::-ms-input-placeholder {
+  color: #494170;
+}
+main > div form input::placeholder,
+main > div form textarea::placeholder {
+  color: #494170;
+}
+main > div form #when input,
+main > div form #feel div {
+  max-width: 250px;
+  border-radius: 5px;
+}
+main > div form #feel > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  background-color: #857db3;
+  padding-block: 1rem;
+}
+main > div form #feel > div label img {
+  width: 45px;
+  opacity: 0.5;
+}
+@media screen and (max-width: 390px) {
+  main > div form #feel > div label img {
+    width: 35px;
+  }
+}
+main > div form #feel > div label:has(input:checked) img {
+  opacity: 1;
+}
+main > div form #feel > div label input {
+  display: none;
+}
+main > div form #feel > div label p {
+  text-align: center;
+  padding-top: 1rem;
+  font-size: clamp(8px, 1.5vw, 12px);
+  letter-spacing: 0.2em;
+  color: #1a2040;
+}
+main > div form #detail input,
+main > div form #detail textarea {
+  width: 100%;
+}
+main > div form #detail textarea {
+  margin-top: 2rem;
+  height: 16rem;
+  resize: none;
+}
+@media screen and (max-width: 390px) {
+  main > div form #detail textarea {
+    margin-top: 1rem;
+    height: 8rem;
+  }
+}
+main > div form .error {
+  text-align: center;
+  margin-top: 6rem;
+  color: #cd5f5f;
+}
+@media screen and (max-width: 390px) {
+  main > div form .error {
+    margin-top: 4rem;
+  }
+}
+main > div form #submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  margin-top: 4rem;
+  gap: 2rem;
+}
+@media screen and (max-width: 390px) {
+  main > div form #submit {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-top: 2rem;
+  }
+}
+main > div form #submit a {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  display: block;
+  padding: 0 2rem;
+}
+main > div form #submit a:hover {
+  opacity: 0.5;
+}
+main > div form #submit button {
+  width: 156px;
+  aspect-ratio: 156/56;
+  font-size: clamp(14px, 2vw, 16px);
+  text-align: center;
+  display: block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  position: relative;
+  line-height: 56px;
+  z-index: 1;
+  letter-spacing: 1em;
+  text-indent: 1em;
+}
+main > div form #submit button::before {
+  background-image: url(/static/images/common/button.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}

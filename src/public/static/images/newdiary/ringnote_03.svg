@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 752 50.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: rgba(187, 153, 255, .8);
+        opacity: .2;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #3b3366;
+        opacity: .6;
+      }
+
+      .cls-3 {
+        fill: #e6a88a;
+      }
+    </style>
+  </defs>
+  <g id="text">
+    <g>
+      <polyline class="cls-2" points="1 0 1 49.5 751 49.5 751 0"/>
+      <polygon class="cls-3" points="752 50.5 0 50.5 0 0 2 0 2 48.5 750 48.5 750 0 752 0 752 50.5"/>
+      <rect class="cls-1" x="16" y="0" width="720" height="34.5"/>
+    </g>
+  </g>
+</svg>

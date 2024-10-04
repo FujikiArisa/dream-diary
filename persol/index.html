@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>その他のお問い合わせ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+    <main>
+        <form action="main.php" method="post" class="w-75 mt-5 mx-auto">
+            <!----- 区分 ----->
+            <div class="row">
+                <label class="col-4 p-3 bg-secondary-subtle">区分<span class="text-light bg-danger ms-3 px-2 rounded-1">必須</span></label>
+                <div class="col p-3">
+                    <label><input type="radio" name="category" value="個人" class="form-check-input">個人</label>
+                    <label><input type="radio" name="category" value="法人" class="form-check-input ms-3">法人</label>
+                </div>
+            </div>
+
+            <!----- 氏名(漢字) ----->
+            <div class="row">
+                <label for="name" class="col-4 p-3 bg-secondary-subtle">氏名(漢字)<span class="text-light bg-danger ms-3 px-2 rounded-1">必須</span></label>
+                <div class="col p-3 row">
+                    <input type="text" id="name" name="last-name" placeholder="山田" class="form-control w-25 col">
+                    <input type="text" name="first-name" placeholder="太郎" class="form-control w-25 col ms-3">
+                </div>
+            </div>
+
+            <!----- 氏名(フリガナ) ----->
+            <div class="row">
+                <label for="name-furigana" class="col-4 p-3 bg-secondary-subtle">氏名(フリガナ)<span class="text-light bg-danger ms-3 px-2 rounded-1">必須</span></label>
+                <div class="col p-3 row">
+                    <input type="text" id="name-furigana" name="last-name" placeholder="ヤマダ" class="form-control col">
+                    <input type="text" name="first-name" placeholder="タロウ" class="form-control col ms-3">
+                </div>
+            </div>
+
+            <!----- 電話番号 ----->
+            <div class="row">
+                <label for="phone" class="col-4 p-3 bg-secondary-subtle">電話番号</label>
+                <div class="col p-3 row">
+                    <input type="text" id="phone" name="phone-number1" placeholder="080" class="w-25 form-control col">
+                    -<input type="text" name="phone-number2" placeholder="1234" class="w-25 form-control col">
+                    -<input type="text" name="phone-number3" placeholder="5678" class="w-25 form-control col">
+                </div>
+            </div>
+
+            <!----- メールアドレス ----->
+            <div class="row">
+                <label for="email" class="col-4 p-3 bg-secondary-subtle">メールアドレス<span class="text-light bg-danger ms-3 px-2 rounded-1">必須</span></label>
+                <div class="col p-3">
+                    <input type="text" id="email" name="email" placeholder="example@mail.com" class="form-control">
+                </div>
+            </div>
+
+            <!----- お問い合わせ種別 ----->
+            <div class="row">
+                <label for="contact-type" class="col-4 p-3 bg-secondary-subtle">お問い合わせ種別<span class="text-light bg-danger ms-3 px-2 rounded-1">必須</span></label>
+                <div class="col p-3">
+                    <select name="contact-type" id="contact-type" class="form-select">
+                        <option>選択してください</option>
+                        <option value="1">会社情報に関するお問い合わせ</option>
+                        <option value="2">個人情報・プライバシーに関するお問い合わせ</option>
+                        <option value="3">商品・サービスなどのご案内</option>
+                        <option value="4">配信停止のご依頼</option>
+                        <option value="5">その他のお問い合わせ</option>
+                    </select>
+                </div>
+            </div>
+
+            <!----- お問い合わせ内容 ----->
+            <div class="row">
+                <label for="contact-message" class="col-4 p-3 bg-secondary-subtle">お問い合わせ内容<span class="text-light bg-danger ms-3 px-2 rounded-1">必須</span></label>
+                <div class="col p-3">
+                    <textarea name="contact-message" id="contact-message" placeholder="お問い合わせ内容を入力してください。"></textarea>
+                </div>
+            </div>
+
+            <!----- 個人情報の取り扱いについて ----->
+            <div class="row">
+                <label class="col-4 p-3 bg-secondary-subtle">個人情報の取り扱いについて<span class="text-light bg-danger ms-3 px-2 rounded-1">必須</span></label>
+                <div class="col p-3">
+                    <label><input type="checkbox" name="privacy-policy" class="form-check-input">同意する</label>
+                </div>
+            </div>
+
+            <!----- 確認ボタン ----->
+            <button type="submit" class="d-block mx-auto mt-5 text-light bg-secondary py-3 px-5 rounded-2 border-0">入力内容を確認する</button>
+        </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
